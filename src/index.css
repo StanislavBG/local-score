@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* ── Colors LocalScore uses (subset of Bilko host palette) ────── */
+@theme {
+  --color-warm-50: #fefdfb;
+  --color-warm-100: #faf7f2;
+  --color-warm-200: #f0e9df;
+  --color-warm-300: #e0d5c5;
+  --color-warm-400: #c4b49e;
+  --color-warm-500: #a89478;
+  --color-warm-600: #8c7660;
+  --color-warm-700: #6b5a49;
+  --color-warm-800: #4a3d33;
+  --color-warm-900: #2d2520;
+  --color-warm-950: #1a1613;
+
+  --color-fire-50: #fff7f0;
+  --color-fire-100: #ffede0;
+  --color-fire-200: #ffd6b8;
+  --color-fire-300: #ffb380;
+  --color-fire-400: #ff8a47;
+  --color-fire-500: #ff6b1a;
+  --color-fire-600: #e85a0a;
+  --color-fire-700: #c04808;
+
+  /* LocalScore — green (privacy/security) */
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
+html, body, #root { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #faf7f2;
+  color: #2d2520;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Animations the page references ──────────────────────────── */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.animate-slide-up { animation: slide-up 0.5s ease-out both; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animate-fade-in { animation: fade-in 0.4s ease-out both; }
